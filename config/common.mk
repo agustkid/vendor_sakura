@@ -262,6 +262,11 @@ ifeq ($(SAKURA_LAWNCHAIR), true)
     $(call inherit-product, vendor/addons/prebuilt/app/Lawnchair/lawnchair.mk)
 endif
 
+# GalleryGo
+ifeq ($(SAKURA_GALLERY), true)
+    $(call inherit-product, vendor/addons/prebuilt/app/GalleryGo/GalleryGo.mk)
+endif
+
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
